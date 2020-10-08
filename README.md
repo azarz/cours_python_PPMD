@@ -26,7 +26,7 @@ Expérimentations avec les bibliothèques de traitement d'images. Ouverture d'im
 
 ## Cours 3 (après-midi du 07/10/2020)
 
-Cours "magistral" sur l'[analyse informatique](support_cours/Analyse_informatique_presentation.md) et sur l'[orienté objet en python](Presentation_Python_objet.md).
+Cours "magistral" sur l'[analyse informatique](supports_cours/Analyse_informatique_presentation.md) et sur l'[orienté objet en python](supports_cours/Presentation_Python_objet.md).
 
 Présentation du...
 
