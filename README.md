@@ -40,6 +40,8 @@ Points cours : 1 fichier par classe ; documenter les fonctions et classes ; clar
 
 ## Cours 6 (matin du 03/11/2020)
 (après une coupure de 3 semaines)
+
+Mini-recap.
 Interfaces graphiques : d'abord, sur des exemples, ensuite sur le fil rouge.
 
 ## Cours 7 (journée du 04/11/2020)
