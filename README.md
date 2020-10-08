@@ -31,6 +31,22 @@ Cours "magistral" sur l'[analyse informatique](support_cours/Analyse_informatiqu
 Présentation du...
 
 ## Cours 4 (après-midi du 08/10/2020)
-
 Analyse informatique en autonomie avec comme "sujet" le fil rouge du cours.
-...
+Présentation par les étudiants de leurs analyses aux autres étudiants. Critiques constructives.
+
+## Cours 5 (matin du 09/10/2020)
+Début de l'implémentation.
+Points cours : 1 fichier par classe ; documenter les fonctions et classes ; clarté du code ; tests (TDD) ; gestions d'erreurs.
+
+## Cours 6 (matin du 03/11/2020)
+(après une coupure de 3 semaines)
+Interfaces graphiques : d'abord, sur des exemples, ensuite sur le fil rouge.
+
+## Cours 7 (journée du 04/11/2020)
+Récap du cours, retour sur des points précis demandés par les étudiants.
+Démo des programmes "fil rouge" terminés.
+
+
+
+
+
