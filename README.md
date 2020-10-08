@@ -23,3 +23,14 @@ TP d'introduction pour "jauger" les étudiant et calibrer la suite du cours.
 
 Présentation du fil rouge du cours. Initialisation du projet avec git/GitLab. Quelques commandes git : git clone, git add, git commit, git pull, git push.
 Expérimentations avec les bibliothèques de traitement d'images. Ouverture d'image, convertion en numpy array. Altération des couleurs. Petit point sur les slices en numpy.
+
+## Cours 3 (après-midi du 07/10/2020)
+
+Cours "magistral" sur l'[analyse informatique](support_cours/Analyse_informatique_presentation.md) et sur l'[orienté objet en python](Presentation_Python_objet.md).
+
+Présentation du...
+
+## Cours 4 (après-midi du 08/10/2020)
+
+Analyse informatique en autonomie avec comme "sujet" le fil rouge du cours.
+...
