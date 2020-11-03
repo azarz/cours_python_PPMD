@@ -42,7 +42,7 @@ Points cours : 1 fichier par classe ; [documenter](fil_rouge/documentation_et_te
 (après une coupure de 3 semaines)
 
 Mini-recap.
-Interfaces graphiques : d'abord, sur des exemples, ensuite sur le fil rouge.
+Interfaces graphiques : d'abord, sur des exemples, ensuite sur le fil rouge : https://build-system.fman.io/pyqt5-tutorial https://likegeeks.com/pyqt5-tutorial/
 
 ## Cours 7 (journée du 04/11/2020)
 Récap du cours, retour sur des points précis demandés par les étudiants.
