@@ -19,6 +19,9 @@ Amaury Zarzelli, Analyste (Concepteur/Développeur) au pôle technique Géoporta
 Présentation du cours, des objectifs, de l'intervenant. Tour de table des étudiants pour connnaître leurs attentes quant au cours, leur "niveau" en informatique et en Python.
 TP d'introduction pour "jauger" les étudiant et calibrer la suite du cours. 
 
+
+Présentation rapide de git : https://rogerdudler.github.io/git-guide/
+
 ## Cours 2 (matin du 02/10/2020)
 
 Présentation du fil rouge du cours. Initialisation du projet avec git/GitLab. Quelques commandes git : git clone, git add, git commit, git pull, git push.
