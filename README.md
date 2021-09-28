@@ -17,7 +17,7 @@ Amaury Zarzelli, Analyste (Concepteur/Développeur) au pôle technique Géoporta
 ## Cours 1 (matin du 30/09/2021)
 
 Présentation du cours, des objectifs, de l'intervenant. Tour de table des étudiants pour connnaître leurs attentes quant au cours, leur "niveau" en informatique et en Python.
-TP d'introduction pour "jauger" les étudiant et calibrer la suite du cours. 
+[TP d'introduction](https://github.com/azarz/cours_algo_M1/blob/master/tp/TP_distance_points_2D.pdf) pour "jauger" les étudiant et calibrer la suite du cours. 
 
 
 Présentation rapide de git : https://rogerdudler.github.io/git-guide/
