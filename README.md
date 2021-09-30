@@ -19,15 +19,12 @@ Amaury Zarzelli, Analyste (Concepteur/Développeur) au pôle technique Géoporta
 Présentation du cours, des objectifs, de l'intervenant. Tour de table des étudiants pour connnaître leurs attentes quant au cours, leur "niveau" en informatique et en Python.
 [TP d'introduction](https://github.com/azarz/cours_algo_M1/blob/master/tp/TP_distance_points_2D.pdf) pour "jauger" les étudiant et calibrer la suite du cours. 
 
-
 Présentation rapide de git : https://rogerdudler.github.io/git-guide/
-
-## Cours 2 (matin du 06/10/2021)
-
 Présentation du fil rouge du cours. Initialisation du projet avec git/GitLab. Quelques commandes git : git clone, git add, git commit, git pull, git push.
-Expérimentations avec les bibliothèques de traitement d'images. Ouverture d'image, convertion en numpy array. Altération des couleurs. Petit point sur les slices en numpy.
 
-## Cours 3 (après-midi du 06/10/2021)
+## Cours 2 & 3 (journée du 06/10/2021)
+
+Expérimentations avec les bibliothèques de traitement d'images. Ouverture d'image, convertion en numpy array. Altération des couleurs.
 
 Cours "magistral" sur l'[analyse informatique](supports_cours/Analyse_informatique_presentation.md) et sur l'[orienté objet en python](supports_cours/Presentation_Python_objet.md).
 
