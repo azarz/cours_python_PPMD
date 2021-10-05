@@ -30,25 +30,23 @@ Cours "magistral" sur l'[analyse informatique](supports_cours/Analyse_informatiq
 
 Présentation du cours 4
 
-## Cours 4 (matin du 02/11/2021)
-(après une coupure de 3 semaines)
+## Cours 4 & 5 (journée du 14/10/2021)
 Recap du cours jusqu'ici
 
 Analyse informatique en autonomie avec comme "sujet" le [fil rouge](fil_rouge/analyse.md) du cours.
 Présentation par les étudiants de leurs analyses aux autres étudiants. Critiques constructives.
 
-## Cours 5 (matin du 03/11/2021)
 Début de l'[implémentation](fil_rouge/implementation.md) du fil rouge.
 Points cours : 1 fichier par classe ; [documenter](fil_rouge/documentation_et_tests.md) les fonctions et classes ; clarté du code ; [tests](fil_rouge/documentation_et_tests.md) (TDD) ; gestion d'erreurs.
 
-## Cours 6 (matin du 05/11/2021)
+## Cours 6 (après-midi du 15/10/2021)
 Interfaces graphiques : d'abord, sur des exemples, ensuite sur le fil rouge : https://build-system.fman.io/pyqt5-tutorial https://likegeeks.com/pyqt5-tutorial/
 
-## Cours 7 (matin du 09/11/2021)
+## Cours 7 (matin du 02/11/2021)
 Récap du cours, retour sur des points précis demandés par les étudiants.
 Travail en autonomie sur le fil rouge.
 
-## Cours 8 (journée du 10/11/2021)
+## Cours 8 (matin du 05/11/2021)
 Récap du cours, retour sur des points précis demandés par les étudiants.
 Démo des programmes "fil rouge" terminés.
 
