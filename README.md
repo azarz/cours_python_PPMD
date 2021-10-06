@@ -15,7 +15,6 @@ Intervenant :
 Amaury Zarzelli, Analyste (Concepteur/Développeur) au pôle technique Géoportail depuis octobre 2018. Ancien élève ingénieur de l'ENSG, spécialité TSI (informatique...).
 
 ## Cours 1 (matin du 30/09/2021)
-
 Présentation du cours, des objectifs, de l'intervenant. Tour de table des étudiants pour connnaître leurs attentes quant au cours, leur "niveau" en informatique et en Python.
 [TP d'introduction](https://github.com/azarz/cours_algo_M1/blob/master/tp/TP_distance_points_2D.pdf) pour "jauger" les étudiant et calibrer la suite du cours. 
 
@@ -23,18 +22,15 @@ Présentation rapide de git : https://rogerdudler.github.io/git-guide/
 Présentation du fil rouge du cours. Initialisation du projet avec git/GitLab. Quelques commandes git : git clone, git add, git commit, git pull, git push.
 
 ## Cours 2 & 3 (journée du 06/10/2021)
-
-Expérimentations avec les bibliothèques de traitement d'images. Ouverture d'image, convertion en numpy array. Altération des couleurs.
-
-Cours "magistral" sur l'[analyse informatique](supports_cours/Analyse_informatique_presentation.md) et sur l'[orienté objet en python](supports_cours/Presentation_Python_objet.md).
-
-Présentation du cours 4
-
-## Cours 4 & 5 (journée du 14/10/2021)
-Recap du cours jusqu'ici
+Cours magistral sur l'[analyse informatique](supports_cours/Analyse_informatique_presentation.md) et sur l'[orienté objet en python](supports_cours/Presentation_Python_objet.md).
 
 Analyse informatique en autonomie avec comme "sujet" le [fil rouge](fil_rouge/analyse.md) du cours.
+
+## Cours 4 & 5 (journée du 14/10/2021)
+Analyse informatique en autonomie avec comme "sujet" le [fil rouge](fil_rouge/analyse.md) du cours.
 Présentation par les étudiants de leurs analyses aux autres étudiants. Critiques constructives.
+
+Expérimentations avec les bibliothèques de traitement d'images. Ouverture d'image, convertion en numpy array. Altération des couleurs.
 
 Début de l'[implémentation](fil_rouge/implementation.md) du fil rouge.
 Points cours : 1 fichier par classe ; [documenter](fil_rouge/documentation_et_tests.md) les fonctions et classes ; clarté du code ; [tests](fil_rouge/documentation_et_tests.md) (TDD) ; gestion d'erreurs.
