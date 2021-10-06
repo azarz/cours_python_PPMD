@@ -27,7 +27,6 @@ Cours magistral sur l'[analyse informatique](supports_cours/Analyse_informatique
 Analyse informatique en autonomie avec comme sujet le [fil rouge](fil_rouge/analyse.md) du cours.
 
 ## Cours 4 & 5 (journée du 14/10/2021)
-Analyse informatique en autonomie avec comme sujet le [fil rouge](fil_rouge/analyse.md) du cours.
 Présentation par les étudiants de leurs analyses aux autres étudiants. Critiques constructives.
 
 Expérimentations avec les bibliothèques de traitement d'images. Ouverture d'image, convertion en numpy array. Altération des couleurs.
