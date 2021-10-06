@@ -24,10 +24,10 @@ Présentation du fil rouge du cours. Initialisation du projet avec git/GitLab. Q
 ## Cours 2 & 3 (journée du 06/10/2021)
 Cours magistral sur l'[analyse informatique](supports_cours/Analyse_informatique_presentation.md) et sur l'[orienté objet en python](supports_cours/Presentation_Python_objet.md).
 
-Analyse informatique en autonomie avec comme "sujet" le [fil rouge](fil_rouge/analyse.md) du cours.
+Analyse informatique en autonomie avec comme sujet le [fil rouge](fil_rouge/analyse.md) du cours.
 
 ## Cours 4 & 5 (journée du 14/10/2021)
-Analyse informatique en autonomie avec comme "sujet" le [fil rouge](fil_rouge/analyse.md) du cours.
+Analyse informatique en autonomie avec comme sujet le [fil rouge](fil_rouge/analyse.md) du cours.
 Présentation par les étudiants de leurs analyses aux autres étudiants. Critiques constructives.
 
 Expérimentations avec les bibliothèques de traitement d'images. Ouverture d'image, convertion en numpy array. Altération des couleurs.
