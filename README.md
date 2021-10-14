@@ -22,24 +22,25 @@ Présentation rapide de git : https://rogerdudler.github.io/git-guide/
 Présentation du fil rouge du cours. Initialisation du projet avec git/GitLab. Quelques commandes git : git clone, git add, git commit, git pull, git push.
 
 ## Cours 2 & 3 (journée du 06/10/2021)
-Cours magistral sur l'[analyse informatique](supports_cours/Analyse_informatique_presentation.md) et sur l'[orienté objet en python](supports_cours/Presentation_Python_objet.md).
+Cours magistral sur l'[analyse informatique](supports_cours/Analyse_informatique_presentation.md) puis [exercices d'analyse informatique](supports_cours/Analyse_informatique_exercices.pdf).
+
+Présentation de l'[orienté objet en python](supports_cours/Presentation_Python_objet.md) et de sa syntaxe.
 
 Analyse informatique en autonomie avec comme sujet le [fil rouge](fil_rouge/analyse.md) du cours.
 
 ## Cours 4 & 5 (journée du 14/10/2021)
 Présentation par les étudiants de leurs analyses aux autres étudiants. Critiques constructives.
 
+Implémentation de l'analyse faite du démineur dans la correction des [exercices d'analyse informatique](supports_cours/Analyse_informatique_exercices.pdf).
+
+## Cours 6 (après-midi du 15/10/2021)
 Expérimentations avec les bibliothèques de traitement d'images. Ouverture d'image, convertion en numpy array. Altération des couleurs.
 
 Début de l'[implémentation](fil_rouge/implementation.md) du fil rouge.
 Points cours : 1 fichier par classe ; [documenter](fil_rouge/documentation_et_tests.md) les fonctions et classes ; clarté du code ; [tests](fil_rouge/documentation_et_tests.md) (TDD) ; gestion d'erreurs.
 
-## Cours 6 (après-midi du 15/10/2021)
-Interfaces graphiques : d'abord, sur des exemples, ensuite sur le fil rouge : https://build-system.fman.io/pyqt5-tutorial https://likegeeks.com/pyqt5-tutorial/
-
 ## Cours 7 (matin du 02/11/2021)
-Récap du cours, retour sur des points précis demandés par les étudiants.
-Travail en autonomie sur le fil rouge.
+Interfaces graphiques : d'abord, sur des exemples, ensuite sur le fil rouge : https://build-system.fman.io/pyqt5-tutorial https://likegeeks.com/pyqt5-tutorial/
 
 ## Cours 8 (matin du 05/11/2021)
 Récap du cours, retour sur des points précis demandés par les étudiants.
