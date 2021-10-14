@@ -5,14 +5,14 @@ Objectif : préparer au projet informatique
 Compétences :
  + Bases de Python
  + Gestion de projet informatique
- + Programation orientée objet
+ + Programation orientée objet (notamment en Python)
  + Création d'interfaces graphiques
  + **Utilisation de la documentation, recherche de solution aux problèmes**
  
 Évaluation : participation, réponses aux questions, TP
 
 Intervenant :
-Amaury Zarzelli, Analyste (Concepteur/Développeur) au pôle technique Géoportail depuis octobre 2018. Ancien élève ingénieur de l'ENSG, spécialité TSI (informatique...).
+Amaury Zarzelli, Analyste (Concepteur/Développeur) au pôle technique Géoportail depuis octobre 2018. Ancien élève ingénieur de l'ENSG, spécialité TSI (informatique).
 
 ## Cours 1 (matin du 30/09/2021)
 Présentation du cours, des objectifs, de l'intervenant. Tour de table des étudiants pour connnaître leurs attentes quant au cours, leur "niveau" en informatique et en Python.
@@ -40,11 +40,11 @@ Début de l'[implémentation](fil_rouge/implementation.md) du fil rouge.
 Points cours : 1 fichier par classe ; [documenter](fil_rouge/documentation_et_tests.md) les fonctions et classes ; clarté du code ; [tests](fil_rouge/documentation_et_tests.md) (TDD) ; gestion d'erreurs.
 
 ## Cours 7 (matin du 02/11/2021)
-Interfaces graphiques : d'abord, sur des exemples, ensuite sur le fil rouge : https://build-system.fman.io/pyqt5-tutorial https://likegeeks.com/pyqt5-tutorial/
+Interfaces graphiques : d'abord, sur des exemples, ensuite sur le fil rouge (ou sur le démineur) : https://build-system.fman.io/pyqt5-tutorial https://likegeeks.com/pyqt5-tutorial/
 
 ## Cours 8 (matin du 05/11/2021)
 Récap du cours, retour sur des points précis demandés par les étudiants.
-Démo des programmes "fil rouge" terminés.
+Démo des programmes "fil rouge" (ou démineur) terminés.
 
 
 
