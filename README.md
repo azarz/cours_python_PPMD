@@ -40,6 +40,9 @@ Début de l'[implémentation](fil_rouge/implementation.md) du fil rouge.
 Points cours : 1 fichier par classe ; [documenter](fil_rouge/documentation_et_tests.md) les fonctions et classes ; clarté du code ; [tests](fil_rouge/documentation_et_tests.md) (TDD) ; gestion d'erreurs.
 
 ## Cours 7 (matin du 02/11/2021)
+(après une pause de 2 semaines)
+Recap du cours jusqu'ici
+
 Interfaces graphiques : d'abord, sur des exemples, ensuite sur le fil rouge (ou sur le démineur) : https://build-system.fman.io/pyqt5-tutorial https://likegeeks.com/pyqt5-tutorial/
 
 ## Cours 8 (matin du 05/11/2021)
