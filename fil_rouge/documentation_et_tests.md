@@ -8,3 +8,4 @@ Plusieurs conventions existent pour la mise en forme de docstrings. Ma préfér�
 
 À chaque fontion unitaire du projet, il faut créer un "test", pour s'assurer du bon fonctionnement du programme et pour détecter les régressions. Une méthode de développement permettant cela est le Test Driven Development (TDD). Cette méthode a l'avantage de permettre une réflexion sur le programme par "spécifications", et de développer plus efficacement.
 
+En orienté objet, il est parfois difficile de tester **unitairement** _stricto sensu_ les méthodes d'une classe, car elles font souvent appel à des méthodes d''instances d'autres classes. Pour palier ce problème, le concept de [Mock](https://docs.python.org/3/library/unittest.mock.html) a été inventé. Il s'agira de simuler le comportement d'une méthode externe à la classe en précisant la sortie qui correspond à une entrée, sans implémenter véritablement la fonction.
