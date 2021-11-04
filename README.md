@@ -43,7 +43,7 @@ Points cours : 1 fichier par classe ; [documenter](fil_rouge/documentation_et_te
 (après une pause de 2 semaines)
 Recap du cours jusqu'ici
 
-Interfaces graphiques : d'abord, sur des exemples, ensuite sur le fil rouge (ou sur le démineur) : on suit le cours suivant : https://courspython.com/interface-graphique.html
+Interfaces graphiques : d'abord, sur des exemples, ensuite sur le démineur : on suit le cours suivant : https://courspython.com/interface-graphique.html
 
 (Autres tutos : https://build-system.fman.io/pyqt5-tutorial https://likegeeks.com/pyqt5-tutorial/)
 
