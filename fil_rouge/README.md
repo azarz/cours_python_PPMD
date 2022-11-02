@@ -26,7 +26,7 @@ Bibliothèques utilisées :
   - PyQGIS
 
 ## Plan du fil rouge :
-  - [Initiation du projet](intro.md)
-  - [Analyse du projet](analyse.md)
+  - Initiation du projet sur Gitlab
+  - Analyse du projet : se familiariser avec les données en entrée/sortie, les biliothèques demandées. Puis fournir des diagrammes UML (au moins _Use case_, _Classe_ et _Séquence ou Activité_)
   - [Documentation et tests](documentation_et_tests.md)
   - [Implémentation](implementation.md)
