@@ -6,6 +6,12 @@ Le but de ce fil rouge est de faire ensemble une sorte de "projet informatique" 
 
 L'objectif final de ce fil rouge va être de proposer une implémentation orientée objet du jeu de démineur en Python. On réalisera le projet en deux étapes distinctes : d'abord, un jeu de démineur qui pourra s'exécuter depuis la console ; puis, une interface graphique complète.
 
+Liste des diagrammes attendus pour l'analyse :
+  - Diagramme de cas d'utilisation
+  - Diagramme de classes
+  - Diagramme d'activité ou de séquence
+  - Digramme d'états-transitions
+  
 Liste des fonctionnalités :
   - Plusieurs difficultés proposées
   - Génération de grille
