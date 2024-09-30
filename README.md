@@ -9,6 +9,12 @@ Compétences :
  + Création d'interfaces graphiques
  + **Utilisation de la documentation, recherche autonome de solutions aux problèmes**
 
+Evaluation sur 4 critères :
+ + Qualité de l'analyse
+ + Qualité de la programmation
+ + Gestion du projet et des outils
+ + Participation en cours
+
 Intervenant :
 Amaury Zarzelli, Concepteur/Développeur au pôle technique Géoportail depuis octobre 2018. Ancien élève ingénieur (TSI) de l'ENSG.
 
