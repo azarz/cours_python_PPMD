@@ -19,10 +19,29 @@ Liste des fonctionnalités :
   - (Dans un second temps) Interface graphique
 
 Bibliothèques utilisées :
-  - numpy
-  - PyQt5
+  - numpy pour la gestion des tableaux
+  - PyQt5 pour l'interface graphique
+
+## Rummikub en orienté objet (difficulté : ++)
+
+L'objectif final de ce fil rouge va être de proposer une implémentation orientée objet du Rummikub en Python. On réalisera le projet en deux étapes distinctes : d'abord, un rummikub qui pourra s'exécuter depuis la console ; puis, une interface graphique complète.
+
+Liste des diagrammes attendus pour l'analyse :
+  - Diagramme de cas d'utilisation
+  - Diagramme de classes
+  - Diagramme d'activité ou de séquence
+  - Digramme d'états-transitions
   
-## Plugin QGIS de calcul d'isochrones (difficulté : +++)
+Liste des fonctionnalités :
+  - Affichage du plateau de jeu
+  - Affichage des jetons en main
+  - Jeu automatique (1 joueur, plus difficile) ou bien 1 joueur a accès à tous les jeux (plus facile)
+  - (Dans un second temps) Interface graphique
+
+Bibliothèques utilisées :
+  - PyQt5 pour l'interface graphique
+  
+## Plugin QGIS de calcul d'isochrones (géomatique) (difficulté : ++)
 
 L'objectif de ce projet fil rouge est de proposer un plugin QGIS qui permet de faire appel au service de calculs d'isochrones du Géoportail. On souhaitera pouvoir paramétrer la requête avec toutes les possibilités offertes par le service, et afficher la réponse dans l'interface cartographique.
 
