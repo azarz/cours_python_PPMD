@@ -23,3 +23,22 @@ Le but du TP est de créer un script qui génère un GetCapabilities allégé, l
   - WMS-Raster : https://data.geopf.fr/wms-r/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
   - WMS-Vecteur : https://data.geopf.fr/wms-v/ows?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
   - WFS : https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetCapabilities
+
+#### Soucis rencontrés et solutions :
+##### Dans le fichier de sortie, `ns0` au lieu de `ows`
+Ajouter au début du code :
+```python
+ET.register_namespace('ows', "http://www.opengis.net/ows/1.1")
+```
+
+Pour le faire de manière générique (ajouter tous les namespaces d'un fichier donné) :
+```python
+def register_all_namespaces(filename):
+  for _, node in ET.iterparse(filename, events=['start-ns']):
+    if node[0] == 'wfs':
+      continue
+    namespaces[node[0]] = node[1]
+  for ns in namespaces:
+      ET.register_namespace(ns, namespaces[ns])
+```
+ 
