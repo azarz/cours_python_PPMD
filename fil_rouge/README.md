@@ -43,7 +43,7 @@ Bibliothèques utilisées :
   
 ## Plugin QGIS de calcul d'isochrones (géomatique) (difficulté : ++)
 
-L'objectif de ce projet fil rouge est de proposer un plugin QGIS qui permet de faire appel au service de calculs d'isochrones du Géoportail. On souhaitera pouvoir paramétrer la requête avec toutes les possibilités offertes par le service, et afficher la réponse dans l'interface cartographique.
+L'objectif de ce projet fil rouge est de proposer un plugin QGIS qui permet de faire appel au service de calculs d'isochrones de la Géoplateforme. On souhaitera pouvoir paramétrer la requête avec toutes les possibilités offertes par le service, et afficher la réponse dans l'interface cartographique.
 
 Bibliothèques utilisées :
   - requests
