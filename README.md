@@ -37,7 +37,7 @@ Présentation de l'[orienté objet en python](supports_cours/Presentation_Python
 Rappels sur l'[analyse informatique](supports_cours/Analyse_informatique_presentation.md) puis [exercices d'analyse informatique](supports_cours/Analyse_informatique_exercices.pdf).
 
 ### Cours 3 (après-midi du 02/10/2024)
-Analyse informatique en autonomie avec comme sujet le [fil rouge](fil_rouge) du cours. Pour le plugin QGIS : en amont, trouver la documentation du service d'isochrones du Géoportail, des plugins QGIS, etc.
+Analyse informatique en autonomie avec comme sujet le [fil rouge](fil_rouge) du cours. Pour le plugin QGIS : en amont, trouver la documentation du service d'isochrones de la Géoplateforme, des plugins QGIS, etc.
 
 ### Cours 4 (après-midi du 03/10/2024)
 - Présentation par les étudiants de leurs analyses aux autres étudiants. Critiques constructives.
