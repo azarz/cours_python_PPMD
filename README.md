@@ -1,4 +1,4 @@
-# Cours de Python orienté objet pour les PPMD 2023
+# Cours de Python orienté objet pour les PPMD 2024
 
 Objectif : préparer au projet informatique
 
@@ -29,7 +29,8 @@ Présentation du cours, des objectifs, de l'intervenant.
 Suite et fin du TP d'introduction.
 
 Présentation rapide de git : https://rogerdudler.github.io/git-guide/
-Présentation du fil rouge du cours (démineur ou Rummikub ou plugin QGIS pour intégrer le service de calcul d'isochrones du Géoportail). Initialisation du projet avec git/GitLab. Quelques commandes git : git clone, git add, git commit, git pull, git push.
+
+Présentation du [fil rouge](fil_rouge) du cours (démineur ou Rummikub ou plugin QGIS pour intégrer le service de calcul d'isochrones du Géoportail). Initialisation du projet avec git/GitLab. Quelques commandes git : git clone, git add, git commit, git pull, git push.
 
 Présentation de l'[orienté objet en python](supports_cours/Presentation_Python_objet.md) et de sa syntaxe.
 
