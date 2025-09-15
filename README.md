@@ -1,4 +1,4 @@
-# Cours de Python orienté objet pour les PPMD 2024
+# Cours de Python orienté objet pour les PPMD 2025
 
 Objectif : préparer au projet informatique
 
