@@ -33,6 +33,8 @@ ET.register_namespace('ows', "http://www.opengis.net/ows/1.1")
 
 Pour le faire de manière générique (ajouter tous les namespaces d'un fichier donné) :
 ```python
+namespaces = {}
+
 def register_all_namespaces(filename):
   for _, node in ET.iterparse(filename, events=['start-ns']):
     if node[0] == 'wfs':
