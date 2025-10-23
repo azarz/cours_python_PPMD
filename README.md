@@ -9,11 +9,10 @@ Compétences :
  + Création d'interfaces graphiques
  + **Utilisation de la documentation, recherche autonome de solutions aux problèmes**
 
-Evaluation sur 4 critères :
+Evaluation sur 3 critères :
  + Qualité de l'analyse
  + Qualité de la programmation
  + Gestion du projet et des outils
- + Participation en cours
 
 Intervenant :
 Amaury Zarzelli, Concepteur/Développeur au pôle technique Géoportail depuis octobre 2018. Ancien élève ingénieur (TSI) de l'ENSG.
@@ -53,8 +52,8 @@ Analyse informatique en autonomie avec comme sujet le [fil rouge](fil_rouge) du 
 - Interfaces graphiques : on suit le cours suivant : https://courspython.com/interface-graphique.html (Autres tutos : https://build-system.fman.io/pyqt5-tutorial https://likegeeks.com/pyqt5-tutorial/)
 - Suite de l'implémentation, en appliquant les interfaces graphiques
 
-### Cours 7 (après-midi du 12/10/2025)
+### Cours 7 (après-midi du 06/11/2025)
 Suite de l'implémentation du fil rouge
 
-### Cours 8 (après-midi du 19/11/2024)
+### Cours 8 (après-midi du 12/11/2025)
 Fin de l'implémentation et démo des programmes fil rouge terminés.
