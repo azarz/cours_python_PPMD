@@ -46,7 +46,7 @@ Analyse informatique en autonomie avec comme sujet le [fil rouge](fil_rouge) du 
 - Début de l'implémentation de l'analyse.
 
 ### Cours 5 (après-midi du 24/10/2025)
-- Points cours : 1 fichier par classe ; [documenter](fil_rouge/documentation_et_tests.md) les fonctions et classes ; clarté du code ; [tests](fil_rouge/documentation_et_tests.md) (TDD) ; gestion d'erreurs.
+- Points cours : 1 fichier par classe ; [documenter](fil_rouge/documentation_et_tests.md) les fonctions et classes ; clarté du code : nom de variables, classes et fonctions porteurs de sens
 
 ### Cours 6 (matin du 03/11/2025)
 - Interfaces graphiques : on suit le cours suivant : https://courspython.com/interface-graphique.html (Autres tutos : https://build-system.fman.io/pyqt5-tutorial https://likegeeks.com/pyqt5-tutorial/)
