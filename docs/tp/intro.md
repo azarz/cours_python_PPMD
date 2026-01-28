@@ -20,9 +20,9 @@ Le but du TP est de créer un script qui génère un GetCapabilities allégé, l
 
 #### Pour aller encore plus loin
 - Créer des GetCapabilitées filtrés par clé et par service pour tous les autres services :
-  - WMS-Raster : https://data.geopf.fr/wms-r/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
-  - WMS-Vecteur : https://data.geopf.fr/wms-v/ows?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
-  - WFS : https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetCapabilities
+    - WMS-Raster : https://data.geopf.fr/wms-r/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+    - WMS-Vecteur : https://data.geopf.fr/wms-v/ows?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+    - WFS : https://data.geopf.fr/wfs/ows?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetCapabilities
 
 #### Soucis rencontrés et solutions :
 ##### Dans le fichier de sortie, `ns0` au lieu de `ows`
@@ -43,4 +43,4 @@ def register_all_namespaces(filename):
   for ns in namespaces:
       ET.register_namespace(ns, namespaces[ns])
 ```
- 
+
