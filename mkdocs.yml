@@ -7,6 +7,10 @@ nav:
         - Présentation et sujets: fil_rouge/README.md
         - Implémentation: fil_rouge/implementation.md
         - Documentation et tests: fil_rouge/documentation_et_tests.md
+    - Supports de cours:
+        - Présentation de l'orienté objet en Python: supports_cours/Cours_Slides_Intro_POO_Intro_POO.pdf
+        - Analyse informatique - présentation: supports_cours/Analyse_informatique_presentation.md
+        - Analyse informatique - exercices: supports_cours/Analyse_informatique_exercices.pdf
 
 markdown_extensions:
     - attr_list

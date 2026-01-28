@@ -10,16 +10,16 @@ Suite et fin du TP d'introduction.
 
 Présentation rapide de git : https://rogerdudler.github.io/git-guide/
 
-Présentation du [fil rouge](../fil_rouge/README) du cours (démineur ou jeu de société assez simple ou plugin QGIS pour intégrer le service de calcul d'isochrones du Géoportail). Quelques commandes git : git clone, git add, git commit, git pull, git push.
+Présentation du [fil rouge](../fil_rouge/) du cours (démineur ou jeu de société assez simple ou plugin QGIS pour intégrer le service de calcul d'isochrones du Géoportail). Quelques commandes git : git clone, git add, git commit, git pull, git push.
 
-Présentation de l'[orienté objet en python](../supports_cours/Presentation_Python_objet) et de sa syntaxe.
+Présentation de l'[orienté objet en python](../supports_cours/Cours_Slides_Intro_POO_Intro_POO.pdf) et de sa syntaxe.
 
 Rappels sur l'[analyse informatique](../supports_cours/Analyse_informatique_presentation) puis [exercices d'analyse informatique](../supports_cours/Analyse_informatique_exercices.pdf).
 
 ### Cours 3 (après-midi du 23/10/2025)
 Choix du projet fil rouge en fonction de vos propositions et des choix de projet informatique.  Initialisation du projet sur Github ou GitLab, partage par mail du lien vers votre dépôt (qui contiendra analyse et code pour la notation).
 
-Analyse informatique en autonomie avec comme sujet le [fil rouge](../fil_rouge/README) du cours. Pour le plugin QGIS : en amont, trouver la documentation du service d'isochrones de la Géoplateforme, des plugins QGIS, etc.
+Analyse informatique en autonomie avec comme sujet le [fil rouge](../fil_rouge) du cours. Pour le plugin QGIS : en amont, trouver la documentation du service d'isochrones de la Géoplateforme, des plugins QGIS, etc.
 
 ### Cours 4 (matin du 24/10/2025)
 - Présentation par les étudiants de leurs analyses aux autres étudiants. Critiques constructives.
