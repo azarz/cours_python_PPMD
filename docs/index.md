@@ -3,6 +3,7 @@
 Objectif : préparer au projet informatique
 
 Compétences :
+
  + Bases de Python
  + Gestion de projet informatique
  + Programation orientée objet (notamment en Python)
@@ -10,6 +11,7 @@ Compétences :
  + **Utilisation de la documentation, recherche autonome de solutions aux problèmes**
 
 Evaluation sur 3 critères :
+
  + Qualité de l'analyse
  + Qualité de la programmation
  + Gestion du projet et des outils
