@@ -1,0 +1,800 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../tp/intro/">
+      
+      
+        <link rel="next" href="implementation/">
+      
+      
+      <link rel="icon" href="../logo.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Présentation et sujets - Python Orienté Objet</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fil-rouge-du-cours-dinformatique-ppmd" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href=".." title="Python Orienté Objet" class="md-header__button md-logo" aria-label="Python Orienté Objet" data-md-component="logo">
+      
+  <img src="../logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Orienté Objet
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Présentation et sujets
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Python Orienté Objet" class="md-nav__button md-logo" aria-label="Python Orienté Objet" data-md-component="logo">
+      
+  <img src="../logo.svg" alt="logo">
+
+    </a>
+    Python Orienté Objet
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../d%C3%A9roul%C3%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Déroulé des cours
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tp/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP d'introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fil rouge
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Fil rouge
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Présentation et sujets
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Présentation et sujets
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fil-rouge-du-cours-dinformatique-ppmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fil rouge du cours d'informatique PPMD
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fil rouge du cours d'informatique PPMD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#demineur-en-oriente-objet-difficulte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Démineur en orienté objet (difficulté : +)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rummikub-en-oriente-objet-difficulte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rummikub en orienté objet (difficulté : ++)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autre-jeu-de-societe-en-oriente-objet-difficulte-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autre jeu de société en orienté objet (difficulté : variable)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plugin-qgis-de-calcul-disochrones-geomatique-difficulte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin QGIS de calcul d'isochrones (géomatique) (difficulté : ++)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plan-du-fil-rouge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plan du fil rouge :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="implementation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Implémentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="documentation_et_tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation et tests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Supports de cours
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Supports de cours
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supports_cours/Cours_Slides_Intro_POO_Intro_POO.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Présentation de l'orienté objet en Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supports_cours/Analyse_informatique_presentation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analyse informatique - présentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supports_cours/Analyse_informatique_exercices.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analyse informatique - exercices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fil-rouge-du-cours-dinformatique-ppmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fil rouge du cours d'informatique PPMD
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fil rouge du cours d'informatique PPMD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#demineur-en-oriente-objet-difficulte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Démineur en orienté objet (difficulté : +)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rummikub-en-oriente-objet-difficulte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rummikub en orienté objet (difficulté : ++)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autre-jeu-de-societe-en-oriente-objet-difficulte-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autre jeu de société en orienté objet (difficulté : variable)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plugin-qgis-de-calcul-disochrones-geomatique-difficulte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin QGIS de calcul d'isochrones (géomatique) (difficulté : ++)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plan-du-fil-rouge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plan du fil rouge :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Présentation et sujets</h1>
+
+<h2 id="fil-rouge-du-cours-dinformatique-ppmd">Fil rouge du cours d'informatique PPMD</h2>
+<p>Le but de ce fil rouge est de faire ensemble une sorte de "projet informatique" à partir de zéro, en explorant les objectifs pédagogiques du cours. Deux sujets sont proposés : un plutôt facile, pour les débutants ; et un autre plus avancé pour les personnes à l'aise.</p>
+<h3 id="demineur-en-oriente-objet-difficulte">Démineur en orienté objet (difficulté : +)</h3>
+<p>L'objectif final de ce fil rouge va être de proposer une implémentation orientée objet du jeu de démineur en Python. On réalisera le projet en deux étapes distinctes : d'abord, un jeu de démineur qui pourra s'exécuter depuis la console ; puis, une interface graphique complète.</p>
+<p>Liste des diagrammes attendus pour l'analyse :</p>
+<ul>
+<li>Diagramme de cas d'utilisation</li>
+<li>Diagramme de classes</li>
+<li>Diagramme d'activité ou de séquence</li>
+<li>Digramme d'états-transitions</li>
+</ul>
+<p>Liste des fonctionnalités :</p>
+<ul>
+<li>Plusieurs difficultés proposées</li>
+<li>Génération de grille</li>
+<li>Marquage de case</li>
+<li>(Dans un second temps) Interface graphique</li>
+</ul>
+<p>Bibliothèques utilisées :</p>
+<ul>
+<li>numpy pour la gestion des tableaux</li>
+<li>PyQt5 pour l'interface graphique</li>
+</ul>
+<h3 id="rummikub-en-oriente-objet-difficulte">Rummikub en orienté objet (difficulté : ++)</h3>
+<p>L'objectif final de ce fil rouge va être de proposer une implémentation orientée objet du Rummikub en Python. On réalisera le projet en deux étapes distinctes : d'abord, un rummikub qui pourra s'exécuter depuis la console ; puis, une interface graphique complète.</p>
+<p>Liste des diagrammes attendus pour l'analyse :</p>
+<ul>
+<li>Diagramme de cas d'utilisation</li>
+<li>Diagramme de classes</li>
+<li>Diagramme d'activité ou de séquence</li>
+</ul>
+<p>Liste des fonctionnalités :</p>
+<ul>
+<li>Affichage du plateau de jeu</li>
+<li>Affichage des jetons en main</li>
+<li>Jeu automatique (1 joueur, plus difficile) ou bien 1 joueur a accès à tous les jeux (plus facile)</li>
+<li>(Dans un second temps) Interface graphique</li>
+</ul>
+<p>Bibliothèques utilisées :
+  - PyQt5 pour l'interface graphique</p>
+<h3 id="autre-jeu-de-societe-en-oriente-objet-difficulte-variable">Autre jeu de société en orienté objet (difficulté : variable)</h3>
+<p>L'objectif final de ce fil rouge va être de proposer une implémentation orientée objet d'un jeu de société de votre choix en Python. On réalisera le projet en deux étapes distinctes : d'abord, une version qui pourra s'exécuter depuis la console ; puis, une interface graphique complète.</p>
+<p>Liste des diagrammes attendus pour l'analyse :</p>
+<ul>
+<li>Diagramme de cas d'utilisation</li>
+<li>Diagramme de classes</li>
+<li>Diagramme d'activité ou de séquence</li>
+<li>Digramme d'états-transitions si applicable</li>
+</ul>
+<p>Liste des fonctionnalités :</p>
+<ul>
+<li>Affichage de l'état du jeu</li>
+<li>Affichage de la main du joueur</li>
+<li>Jeu automatique (1 joueur, plus difficile) ou bien 1 joueur a accès à tous les jeux (plus facile)</li>
+<li>(Dans un second temps) Interface graphique</li>
+</ul>
+<p>Bibliothèques utilisées :</p>
+<ul>
+<li>PyQt5 pour l'interface graphique</li>
+</ul>
+<p>Bibliothèques interdites :</p>
+<ul>
+<li>Pygame ou tout autre bibliothèque rendant le développement trivial (le but étant de s'entraîner à coder en orienté objet)</li>
+</ul>
+<h3 id="plugin-qgis-de-calcul-disochrones-geomatique-difficulte">Plugin QGIS de calcul d'isochrones (géomatique) (difficulté : ++)</h3>
+<p>L'objectif de ce projet fil rouge est de proposer un plugin QGIS qui permet de faire appel au service de calculs d'isochrones de la Géoplateforme. On souhaitera pouvoir paramétrer la requête avec toutes les possibilités offertes par le service, et afficher la réponse dans l'interface cartographique.</p>
+<p>Liste des diagrammes attendus pour l'analyse :</p>
+<ul>
+<li>Diagramme de cas d'utilisation</li>
+<li>Diagramme de classes</li>
+<li>Diagramme d'activité ou de séquence</li>
+</ul>
+<p>Bibliothèques utilisées :</p>
+<ul>
+<li>requests</li>
+<li>PyQt</li>
+<li>PyQGIS</li>
+</ul>
+<h3 id="plan-du-fil-rouge">Plan du fil rouge :</h3>
+<ul>
+<li>Initiation du projet sur Gitlab ou Github</li>
+<li>Analyse du projet : se familiariser avec les données en entrée/sortie, les biliothèques demandées. Puis fournir des diagrammes UML (au moins <em>Use case</em>, <em>Classe</em> et <em>Séquence ou Activité</em>)</li>
+<li><a href="documentation_et_tests/">Documentation et tests</a></li>
+<li><a href="implementation/">Implémentation</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>

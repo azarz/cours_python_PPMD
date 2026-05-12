@@ -1,0 +1,3461 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Cours_Slides_Intro_POO_Intro_POO.pdf">
+      
+      
+        <link rel="next" href="../Analyse_informatique_exercices.pdf">
+      
+      
+      <link rel="icon" href="../../logo.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Analyse informatique - présentation - Python Orienté Objet</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Python Orienté Objet" class="md-header__button md-logo" aria-label="Python Orienté Objet" data-md-component="logo">
+      
+  <img src="../../logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Python Orienté Objet
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Analyse informatique - présentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Python Orienté Objet" class="md-nav__button md-logo" aria-label="Python Orienté Objet" data-md-component="logo">
+      
+  <img src="../../logo.svg" alt="logo">
+
+    </a>
+    Python Orienté Objet
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../d%C3%A9roul%C3%A9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Déroulé des cours
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tp/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP d'introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fil rouge
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Fil rouge
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fil_rouge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Présentation et sujets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fil_rouge/implementation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Implémentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fil_rouge/documentation_et_tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation et tests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Supports de cours
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Supports de cours
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cours_Slides_Intro_POO_Intro_POO.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Présentation de l'orienté objet en Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Analyse informatique - présentation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Analyse informatique - présentation
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motivations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motivations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quelques-chiffres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quelques chiffres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quelques-chiffres_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quelques chiffres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-besoin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le besoin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-programme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le programme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organisation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programmation-orientee-objet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programmation orientée objet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programmation orientée objet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paradigmes-de-programmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paradigmes de programmation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programmation-fonctionnelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programmation fonctionnelle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites-de-la-programmation-fonctionnelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limites de la programmation fonctionnelle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites-de-la-programmation-fonctionnelle_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limites de la programmation fonctionnelle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programmation-orientee-objet_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programmation orientée objet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnel-vs-oriente-objet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctionnel vs. Orienté objet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts-de-loriente-objet-lobjet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts de l'orienté objet - l'objet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-dobjets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples d'objets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts-de-loriente-objet-la-classe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts de l'orienté objet - la classe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-de-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples de classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts-de-loriente-objet-lencapsulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts de l'orienté objet - l'encapsulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-dencapsulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple d'encapsulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-dencapsulation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple d'encapsulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts-de-loriente-objet-lheritage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts de l'orienté objet - l'héritage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-dheritage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple d'héritage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts-de-loriente-objet-le-polymorphisme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts de l'orienté objet - le polymorphisme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-polymorphisme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de polymorphisme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelisation-oriente-objet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modélisation orienté objet
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presentation-duml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Présentation d'UML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Présentation d'UML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naissance-dun-langage-de-modelisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naissance d'un langage de modélisation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naissance-dun-langage-de-modelisation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naissance d'un langage de modélisation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generalites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Généralités
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-diagrammes-uml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les diagrammes UML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-diagrammes-uml_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les diagrammes UML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uml" class="md-nav__link">
+    <span class="md-ellipsis">
+      UML
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-diagramme-de-cas-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme de cas d'utilisation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le diagramme de cas d'utilisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-diagramme-de-cas-dutilisation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme de cas d'utilisation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-cas-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le cas d'utilisation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-acteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les acteurs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-acteurs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les acteurs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liens-entre-acteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liens entre acteurs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description-textuelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description textuelle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-diagramme-de-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme de classes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le diagramme de classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagramme-de-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramme de classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elements-de-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elements de bases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-attributs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les attributs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-attributs-derives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les attributs dérivés
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-methodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les méthodes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-associations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les associations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lassociation-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      L'association simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lheritage" class="md-nav__link">
+    <span class="md-ellipsis">
+      L'héritage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-dheritage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples d'héritage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agregation-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agrégation-composition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-classes-associations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les classes associations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-classes-abstraites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les classes abstraites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-diagramme-dobjets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme d'objets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le diagramme d'objets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-diagramme-dobjets_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme d'objets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-objets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les objets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-liens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les liens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercices_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-diagramme-de-paquetage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme de paquetage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le diagramme de paquetage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-diagramme-de-paquetage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme de paquetage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependances-entre-paquetages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dépendances entre paquetages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-diagramme-de-deploiement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme de déploiement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le diagramme de déploiement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagramme-de-deploiement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramme de déploiement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noeuds-et-composants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Noeuds et composants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-diagramme-dactivite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme d'activité
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le diagramme d'activité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagramme-dactivite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramme d'activité
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elements-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eléments de base
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branchement-conditionnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branchement conditionnel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transitions-concurrentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transitions concurrentes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couloir-dactivites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Couloir d'activités
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-diagramme-de-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme de séquence
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le diagramme de séquence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagramme-de-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramme de séquence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activation-des-objets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activation des objets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#echanges-de-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Echanges de messages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-de-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types de messages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cadre-dinteraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cadre d'interaction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-diagramme-detats-transitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme d'états-transitions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le diagramme d'états-transitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagramme-detats-transitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramme d'états-transitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etats-et-transitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etats et transitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions-de-garde" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditions de garde
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transitions-reflexives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transitions refléxives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uml-et-methodologie" class="md-nav__link">
+    <span class="md-ellipsis">
+      UML et méthodologie
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UML et méthodologie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#du-besoin-au-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Du besoin au code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qualite-dun-logiciel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qualité d'un logiciel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cycles-de-developpement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cycles de développement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cycles-de-developpement_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cycles de développement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methodes-de-developpement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Méthodes de développement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-processus-unifie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le processus unifié
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-processus-unifie_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le processus unifié
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-processus-unifie_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le processus unifié
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extreme-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      eXtreme Programming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extreme-programming_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      eXtreme Programming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appartee-sur-les-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appartée sur les tests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Analyse_informatique_exercices.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analyse informatique - exercices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motivations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motivations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quelques-chiffres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quelques chiffres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quelques-chiffres_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quelques chiffres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-besoin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le besoin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-programme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le programme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organisation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programmation-orientee-objet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programmation orientée objet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programmation orientée objet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paradigmes-de-programmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paradigmes de programmation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programmation-fonctionnelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programmation fonctionnelle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites-de-la-programmation-fonctionnelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limites de la programmation fonctionnelle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites-de-la-programmation-fonctionnelle_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limites de la programmation fonctionnelle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programmation-orientee-objet_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programmation orientée objet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnel-vs-oriente-objet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctionnel vs. Orienté objet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts-de-loriente-objet-lobjet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts de l'orienté objet - l'objet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-dobjets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples d'objets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts-de-loriente-objet-la-classe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts de l'orienté objet - la classe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-de-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples de classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts-de-loriente-objet-lencapsulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts de l'orienté objet - l'encapsulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-dencapsulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple d'encapsulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-dencapsulation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple d'encapsulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts-de-loriente-objet-lheritage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts de l'orienté objet - l'héritage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-dheritage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple d'héritage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts-de-loriente-objet-le-polymorphisme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts de l'orienté objet - le polymorphisme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-de-polymorphisme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple de polymorphisme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelisation-oriente-objet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modélisation orienté objet
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presentation-duml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Présentation d'UML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Présentation d'UML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naissance-dun-langage-de-modelisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naissance d'un langage de modélisation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naissance-dun-langage-de-modelisation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naissance d'un langage de modélisation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generalites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Généralités
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-diagrammes-uml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les diagrammes UML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-diagrammes-uml_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les diagrammes UML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uml" class="md-nav__link">
+    <span class="md-ellipsis">
+      UML
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-diagramme-de-cas-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme de cas d'utilisation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le diagramme de cas d'utilisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-diagramme-de-cas-dutilisation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme de cas d'utilisation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-cas-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le cas d'utilisation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-acteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les acteurs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-acteurs_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les acteurs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liens-entre-acteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liens entre acteurs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description-textuelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description textuelle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-diagramme-de-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme de classes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le diagramme de classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagramme-de-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramme de classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elements-de-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elements de bases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-attributs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les attributs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-attributs-derives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les attributs dérivés
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-methodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les méthodes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-associations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les associations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lassociation-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      L'association simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lheritage" class="md-nav__link">
+    <span class="md-ellipsis">
+      L'héritage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-dheritage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples d'héritage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agregation-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agrégation-composition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-classes-associations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les classes associations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-classes-abstraites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les classes abstraites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-diagramme-dobjets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme d'objets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le diagramme d'objets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-diagramme-dobjets_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme d'objets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-objets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les objets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-liens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les liens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercices_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-diagramme-de-paquetage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme de paquetage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le diagramme de paquetage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-diagramme-de-paquetage_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme de paquetage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependances-entre-paquetages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dépendances entre paquetages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-diagramme-de-deploiement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme de déploiement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le diagramme de déploiement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagramme-de-deploiement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramme de déploiement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noeuds-et-composants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Noeuds et composants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-diagramme-dactivite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme d'activité
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le diagramme d'activité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagramme-dactivite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramme d'activité
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elements-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eléments de base
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branchement-conditionnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branchement conditionnel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transitions-concurrentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transitions concurrentes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couloir-dactivites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Couloir d'activités
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-diagramme-de-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme de séquence
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le diagramme de séquence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagramme-de-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramme de séquence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activation-des-objets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activation des objets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#echanges-de-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Echanges de messages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-de-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types de messages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cadre-dinteraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cadre d'interaction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-diagramme-detats-transitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le diagramme d'états-transitions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Le diagramme d'états-transitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagramme-detats-transitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagramme d'états-transitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etats-et-transitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etats et transitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions-de-garde" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditions de garde
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transitions-reflexives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transitions refléxives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uml-et-methodologie" class="md-nav__link">
+    <span class="md-ellipsis">
+      UML et méthodologie
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UML et méthodologie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#du-besoin-au-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Du besoin au code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qualite-dun-logiciel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qualité d'un logiciel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cycles-de-developpement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cycles de développement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cycles-de-developpement_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cycles de développement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methodes-de-developpement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Méthodes de développement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-processus-unifie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le processus unifié
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-processus-unifie_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le processus unifié
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-processus-unifie_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Le processus unifié
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extreme-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      eXtreme Programming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extreme-programming_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      eXtreme Programming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appartee-sur-les-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appartée sur les tests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Analyse informatique - présentation</h1>
+
+<p>% Analyse informatique
+% Division des enseignements en informatique
+% janvier 2017</p>
+<h2 id="introduction">Introduction</h2>
+<h3 id="_1"></h3>
+<p></br></p>
+<p><img alt="Grandes étapes de la conception d'une application" src="../img/intro_oo/etapes_prog.png" /></p>
+<h3 id="motivations">Motivations</h3>
+<ul>
+<li>Pas d'usure des logiciels</li>
+<li>Erreurs humaines uniquement</li>
+<li>Obsolescence d'un logiciel causée par<ul>
+<li>des logiciels plus performants</li>
+<li>de nouveaux usages</li>
+</ul>
+</li>
+</ul>
+<h3 id="quelques-chiffres">Quelques chiffres</h3>
+<p></br></p>
+<ul>
+<li>Coût d'un logiciel :<ul>
+<li>maintenance = 53%</li>
+<li>correction bogues = 17%</li>
+</ul>
+</li>
+</ul>
+<h3 id="quelques-chiffres_1">Quelques chiffres</h3>
+<p></br></p>
+<p><img alt="Taux de réussite des projets informatiques en entreprise" src="../img/intro_oo/reussite_projets_info.png" /></p>
+<h3 id="le-besoin">Le besoin</h3>
+<p></br></p>
+<ul>
+<li>Outils d'aide à la modélisation pour :<ul>
+<li>élaborer la structure des programmes</li>
+<li>s'assurer que les exigences initiales ont bien été respectées</li>
+<li>maintenir les logiciels</li>
+</ul>
+</li>
+</ul>
+<h3 id="le-programme">Le programme</h3>
+<p></br></p>
+<ol>
+<li>Programmation orientée objet</li>
+<li>Présentation d'UML</li>
+<li>Etude de plusieurs diagrammes UML</li>
+<li>Cycles de développement</li>
+</ol>
+<h3 id="organisation">Organisation</h3>
+<p></br></p>
+<ul>
+<li>4 séances de 3h</li>
+</ul>
+<p></br></p>
+<ul>
+<li>projet à faire à la maison</li>
+</ul>
+<h2 id="programmation-orientee-objet">Programmation orientée objet</h2>
+<h3 id="paradigmes-de-programmation">Paradigmes de programmation</h3>
+<ul>
+<li>Plusieurs <em>manière</em> de programmer<ul>
+<li>programmation impérative : suite d'instructions</li>
+<li>programmation fonctionnelle : composition de fonctions</li>
+<li>programmation orientée objet : définition d'interactions entre structures d'objets</li>
+<li>...</li>
+</ul>
+</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1- faire fondre le beurre
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2- lorsque le beurre est fondu ajouter le chocolat
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>3- ajouter les oeufs
+</span></code></pre></div>
+<h3 id="programmation-fonctionnelle">Programmation fonctionnelle</h3>
+<ul>
+<li>Apparition dans les années 1960</li>
+<li>Programme découpé en fonctions, elles-mêmes découpées en sous-fonctions...</li>
+<li>Approche <em>descendante</em></li>
+</ul>
+<p><img alt="Découpage d'un programme selon l'approche fonctionnelle" src="../img/intro_oo/approche_fonctionnelle.png" /></p>
+<h3 id="exemple">Exemple</h3>
+<p></br></p>
+<p><img alt="Mastermind en fonctionnel" src="../img/intro_oo/mastermind_schema_fonctions.png" /></p>
+<h3 id="limites-de-la-programmation-fonctionnelle">Limites de la programmation fonctionnelle</h3>
+<p><img alt="Découpage fonctionnel d'une application dédiée à la gestion d'une bibliothèque" src="../img/intro_oo/decoupage_fonctionnel.png" /></p>
+<h3 id="limites-de-la-programmation-fonctionnelle_1">Limites de la programmation fonctionnelle</h3>
+<p><img alt="Découpage fonctionnel d'une application - évolution du logiciel" src="../img/intro_oo/decoupage_fonctionnel_evolution.png" /></p>
+<h3 id="programmation-orientee-objet_1">Programmation orientée objet</h3>
+<ul>
+<li>Développement dans les années 1980</li>
+<li>Décrit les structures de base du système et leurs interactions</li>
+<li>Approche <em>ascendante</em></li>
+</ul>
+<p><img alt="Découpage d'un programme selon l'approche orientée objet" src="../img/intro_oo/approche_objet.png" /></p>
+<h3 id="exemple_1">Exemple</h3>
+<p></br></p>
+<p><img alt="Mastermind en orienté objet" src="../img/intro_oo/mastermind_schema_objets.png" /></p>
+<h3 id="fonctionnel-vs-oriente-objet">Fonctionnel vs. Orienté objet</h3>
+<p></br></p>
+<ul>
+<li>Approche fonctionnelle plus intuitive</li>
+<li>Approche objet facilement réutilisable et maintenable</li>
+<li>Résolvent les mêmes problèmes</li>
+</ul>
+<h3 id="concepts-de-loriente-objet-lobjet">Concepts de l'orienté objet - l'objet</h3>
+<blockquote>
+<p><strong>Objet</strong> : entité autonome, aux frontières précises, décrit par une collection de propriétés et de traitements associés</p>
+</blockquote>
+<ul>
+<li>Un objet possède une identité, un nom</li>
+<li>Un ensemble d'<strong>attributs</strong> caractérisent l'état de l'objet</li>
+<li>Un ensemble d'<strong>opérations</strong> en définit le comportement</li>
+</ul>
+<h3 id="exemples-dobjets">Exemples d'objets</h3>
+<p></br></p>
+<p><img alt="Exemples d'objets" src="../img/intro_oo/objets.png" /></p>
+<h3 id="concepts-de-loriente-objet-la-classe">Concepts de l'orienté objet - la classe</h3>
+<blockquote>
+<p><strong>Classe</strong> : type abstrait de donnée destiné à décrire une structure d'objets, caractérisé par des attributs et des méthodes</p>
+</blockquote>
+<ul>
+<li>Objet créé selon le modèle d'une classe<ul>
+<li>Objet = <strong>instance</strong> de classe</li>
+</ul>
+</li>
+</ul>
+<h3 id="exemples-de-classes">Exemples de classes</h3>
+<p></br></p>
+<ul>
+<li>Point</li>
+<li>Bouton</li>
+<li>Personne</li>
+</ul>
+<h3 id="concepts-de-loriente-objet-lencapsulation">Concepts de l'orienté objet - l'encapsulation</h3>
+<blockquote>
+<p><strong>Encapsulation</strong> : concept qui consiste à masquer les détails de l'implémentation d'un objet à son utilisateur</p>
+</blockquote>
+<ul>
+<li>Partie visible de l'objet appelée <strong>interface</strong></li>
+<li>Garantie l’intégrité des données</li>
+<li>Principe facilitant l’évolution des applications</li>
+</ul>
+<h3 id="exemple-dencapsulation">Exemple d'encapsulation</h3>
+<p></br></p>
+<p><img alt="Le moteur d'une voiture est encapsulé" src="../img/intro_oo/encapsulation.png" /></p>
+<h3 id="exemple-dencapsulation_1">Exemple d'encapsulation</h3>
+<p></br></p>
+<p><img alt="Encapsulation de la gestion d'un nombre complèxe" src="../img/intro_oo/encapsulation-2.png" /></p>
+<h3 id="concepts-de-loriente-objet-lheritage">Concepts de l'orienté objet - l'héritage</h3>
+<blockquote>
+<p><strong>Héritage</strong> : principe autorisant le création d'une classe dérivée à partir d'une classe existante</p>
+</blockquote>
+<ul>
+<li>Attributs et méthodes de la classe existante transmis à la classe dérivée</li>
+<li>Classe <em>mère</em> / classe <em>fille</em></li>
+<li>Principe encourageant la réutilisation</li>
+</ul>
+<h3 id="exemple-dheritage">Exemple d'héritage</h3>
+<p><img alt="La classe Carre hérite de la classe Quadrilatere" src="../img/intro_oo/heritage.png" /></p>
+<h3 id="concepts-de-loriente-objet-le-polymorphisme">Concepts de l'orienté objet - le polymorphisme</h3>
+<blockquote>
+<p><strong>Polymorphisme</strong> : faculté de pouvoir redéfinir dans une classe dérivée les méthodes héritées de la classe parente</p>
+</blockquote>
+<ul>
+<li>Permet une programmation plus générique</li>
+<li>Dans le cas de l’héritage : spécifier un comportement général</li>
+</ul>
+<h3 id="exemple-de-polymorphisme">Exemple de polymorphisme</h3>
+<p></br></p>
+<p><img alt="Illustration du principe du polymorphisme" src="../img/intro_oo/polymorphisme.png" /></p>
+<h3 id="modelisation-oriente-objet">Modélisation orienté objet</h3>
+<ul>
+<li>En résumé, l'approche objet c'est :<ul>
+<li>objets, classes, encapsulation, héritage, polymorphisme</li>
+<li>des facilités pour faire évoluer les programmes</li>
+</ul>
+</li>
+<li>Mais :<ul>
+<li>pas toujours très intuitif</li>
+<li>quelle représentation pour ces structures/concepts ?</li>
+</ul>
+</li>
+</ul>
+<h2 id="presentation-duml">Présentation d'UML</h2>
+<h3 id="naissance-dun-langage-de-modelisation">Naissance d'un langage de modélisation</h3>
+<p></br></p>
+<p><img alt="Historiques des langages de programmation" src="../img/intro_oo/historique_langages_prog.png" /></p>
+<h3 id="naissance-dun-langage-de-modelisation_1">Naissance d'un langage de modélisation</h3>
+<p></br></p>
+<p><img alt="La naissance d'UML" src="img/intro_oo/historique_methodes_OO.png" /></p>
+<h3 id="generalites">Généralités</h3>
+<p><img alt="Logo UML" src="../img/logos/logo_UML.jpg" /></p>
+<ul>
+<li>Langage graphique de conception orienté objet</li>
+<li>Couvre l'intégralité des systèmes informatiques<ul>
+<li>utilisation, conception, déploiement</li>
+</ul>
+</li>
+<li>Compréhensible par l'homme et par la machine</li>
+<li>Standard largement adopté par l'industrie</li>
+</ul>
+<h3 id="les-diagrammes-uml">Les diagrammes UML</h3>
+<p></br></p>
+<p><img alt="Les 14 diagrammes UML" src="../img/14_diagrammes_UML.png" /></p>
+<h3 id="les-diagrammes-uml_1">Les diagrammes UML</h3>
+<p></br></p>
+<ul>
+<li>14 diagrammes en version 2.5<ul>
+<li>7 diagrammes struturels : composants du système et fonctionnalités permises</li>
+<li>7 diagrammes comportementaux : intéractions entre les éléments d'un système</li>
+</ul>
+</li>
+</ul>
+<p></br></p>
+<h3 id="uml">UML</h3>
+<p></br></p>
+<ul>
+<li>En résumé, UML c'est :<ul>
+<li>un langage graphique de conception orientée objet</li>
+<li>contitué de diagrammes accompagnés d'explications</li>
+<li>pas une méthode</li>
+</ul>
+</li>
+</ul>
+<h2 id="le-diagramme-de-cas-dutilisation">Le diagramme de cas d'utilisation</h2>
+<h3 id="le-diagramme-de-cas-dutilisation_1">Le diagramme de cas d'utilisation</h3>
+<ul>
+<li><strong>Structurer le besoin de l'utilisateur</strong><ul>
+<li>Représentation des attentes de l'utilisateur</li>
+<li>Définition du périmètre de l'application (=<em>frontière</em>)</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Diagramme de cas d'utilisation" src="../img/uml_miniatures/cas_utilisation.png" /></p>
+<h3 id="le-cas-dutilisation">Le cas d'utilisation</h3>
+<ul>
+<li>Action (=&gt; verbe à l'infinif)</li>
+</ul>
+<p><img alt="Cas d'utilisation" src="../img/uml_bases/cas_utilisation/cas_utilisation.png" /></p>
+<ul>
+<li>Structuration possible en sous-cas d'utilisation<ul>
+<li>inclusion = obligatoire</li>
+<li>extension = optionnel</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Relations d'inclusion/extension" src="../img/uml_bases/cas_utilisation/include_extend.png" /></p>
+<h3 id="les-acteurs">Les acteurs</h3>
+<ul>
+<li>Personne ou système en interaction avec le système</li>
+<li>Identifié</li>
+<li>2 catégories :<ul>
+<li>acteur principal : exprime une attente vis à vis du système</li>
+<li>acteur secondaire : est sollicité par le système</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Acteur principal" src="../img/uml_bases/cas_utilisation/acteur.png" /></p>
+<h3 id="les-acteurs_1">Les acteurs</h3>
+<p></br></p>
+<p><img alt="Acteur secondaire" src="../img/uml_bases/cas_utilisation/acteur_secondaire.png" /></p>
+<h3 id="liens-entre-acteurs">Liens entre acteurs</h3>
+<ul>
+<li>La généralisation</li>
+</ul>
+<p><img alt="Généralisation d'acteurs" src="../img/uml_bases/cas_utilisation/acteur_generalisation.png" /></p>
+<h3 id="exemple_2">Exemple</h3>
+<p><img alt="Application de remonté d'informations et de calculs d'itinéraires dans les transports" src="../img/uml_bases/cas_utilisation/diagramme_cas_utilisation.png" /></p>
+<h3 id="description-textuelle">Description textuelle</h3>
+<ul>
+<li>Nécessaire pour <ul>
+<li>Détailler un cas d'utilisation (entrées/sorties...)</li>
+<li>Préciser une chronologie</li>
+</ul>
+</li>
+<li>Comprend<ul>
+<li>Identification : nom, objectif, acteurs, dates, responsable</li>
+<li>Description : pré-condition, scénario, post-conditions</li>
+<li>Spécifications non fonctionnelles</li>
+</ul>
+</li>
+</ul>
+<h3 id="exercices">Exercices</h3>
+<ol>
+<li>1.
+1.</li>
+</ol>
+<h2 id="le-diagramme-de-classes">Le diagramme de classes</h2>
+<h3 id="diagramme-de-classes">Diagramme de classes</h3>
+<ul>
+<li><strong>Représenter les structures de données</strong><ul>
+<li>classes et liens entre classes...</li>
+<li>mise en oeuvre des concepts de l'orienté objet</li>
+<li>modélisation statique</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Diagramme de classes" src="../img/uml_miniatures/classes.png" /></p>
+<h3 id="elements-de-bases">Elements de bases</h3>
+<ul>
+<li>La classe = structure de données abstraite<ul>
+<li>nom (au singulier)</li>
+<li>attributs</li>
+<li>méthodes</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Classe UML" src="../img/uml_bases/classes/classe.png" /></p>
+<ul>
+<li>L'association</li>
+</ul>
+<p><img alt="Association entre classes" src="../img/uml_bases/classes/association.png" /></p>
+<h3 id="les-attributs">Les attributs</h3>
+<ul>
+<li>Visibilité : public (<code>+</code>), privé (<code>-</code>), protégé (<code>#</code>)</li>
+<li>Type : <code>integer</code>, <code>float</code>, <code>string</code>, <code>date</code>, <code>boolean</code>, ...</li>
+<li>Multiplicité : <code>[2]</code>, <code>[3]</code>, <code>[*]</code>...</li>
+<li>Valeur par défaut : <code>=valeur_par_defaut</code></li>
+<li>Attribut dérivé = </li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{-, #, +} nom_attribut : type_attribut {[multiplicite]} {=valeur_par_defaut}
+</span></code></pre></div>
+<h3 id="les-attributs-derives">Les attributs dérivés</h3>
+<ul>
+<li>Dont la valeur dépend des autres attributs<ul>
+<li>pas d'affectation</li>
+</ul>
+</li>
+</ul>
+<p></br></p>
+<p><img alt="Exemple d'attribut dérivé" src="../img/uml_bases/classes/classe_rectangle.png" /></p>
+<h3 id="les-methodes">Les méthodes</h3>
+<ul>
+<li>Signature d'une méthode</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{-, #, +} nom_methode ({nom_param1: type_param1, nom_param_2: type_param2, ...}) {: type_retour}
+</span></code></pre></div>
+<p><img alt="Méthode deplacer() de la classe Point" src="../img/uml_bases/classes/classe_point.png" /></p>
+<h3 id="les-associations">Les associations</h3>
+<ul>
+<li>Types d'associations<ul>
+<li>association (<em>simple</em>)</li>
+<li>héritage</li>
+<li>agrégation</li>
+<li>composition</li>
+</ul>
+</li>
+<li>Cardinalité : <ul>
+<li><code>0..1</code></li>
+<li><code>1</code></li>
+<li><code>*</code></li>
+<li><code>1..*</code></li>
+<li><code>M..N</code></li>
+<li><code>N</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="lassociation-simple">L'association simple</h3>
+<p><img alt="Rôles d'une association" src="../img/uml_bases/classes/association_roles.png" /></p>
+<p></br></p>
+<p><img alt="Association à navigabilité restreinte" src="../img/uml_bases/classes/association_navigabilite_restreinte.png" /></p>
+<h3 id="lheritage">L'héritage</h3>
+<ul>
+<li>Concept orienté objet du même nom</li>
+<li>Attributs et méthodes automatiquement transmis à la classe fille</li>
+</ul>
+<p></br></p>
+<p><img alt="Relation d'héritage" src="../img/uml_bases/classes/heritage.png" /></p>
+<h3 id="exemples-dheritage">Exemples d'héritage</h3>
+<p></br></p>
+<p><img alt="Exemples d'héritage" src="../img/uml_bases/classes/heritage_exemples.png" /></p>
+<h3 id="agregation-composition">Agrégation-composition</h3>
+<ul>
+<li>Composition  = <em>agrégation forte</em></li>
+</ul>
+<p></br></p>
+<p><img alt="Différence composition-agrégation" src="../img/uml_bases/classes/composition_agregation.png" /></p>
+<h3 id="les-classes-associations">Les classes associations</h3>
+<ul>
+<li>Classe avec des informations sur une association</li>
+</ul>
+<p><br/></p>
+<p><img alt="Classe d'association" src="../img/uml_bases/classes/classe_association.png" /></p>
+<h3 id="les-classes-abstraites">Les classes abstraites</h3>
+<ul>
+<li>Classe qui ne peut être instanciée</li>
+</ul>
+<p></br></p>
+<p><img alt="Exemple de classe abstraite" src="../img/uml_bases/classes/classe_abstraite.png" /></p>
+<h3 id="exercice">Exercice</h3>
+<p>1.
+1.
+1.</p>
+<h2 id="le-diagramme-dobjets">Le diagramme d'objets</h2>
+<h3 id="le-diagramme-dobjets_1">Le diagramme d'objets</h3>
+<ul>
+<li><strong>Représenter les objets du système à un instant donné</strong><ul>
+<li>illustrer le diagramme de classe</li>
+<li>détailler un aspect particulier</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Diagramme d'objets" src="../img/uml_miniatures/objets.png" /></p>
+<h3 id="les-objets">Les objets</h3>
+<ul>
+<li>Objet = instance de classe<ul>
+<li>Nom de l'objet souligné : <code>nom_objet:NomClasse</code></li>
+<li>Attributs avec une valeur : <code>attribut: type = valeur</code></li>
+<li>Méthodes non représentées</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Classe Pays" src="../img/uml_bases/objets/classe_pays.png" /></p>
+<p><img alt="Objet France" src="../img/uml_bases/objets/objets_representations_possibles.png" /></p>
+<h3 id="les-liens">Les liens</h3>
+<ul>
+<li>Lien = instance d'association<ul>
+<li>Liens simples uniquement</li>
+<li>Pas d'héritage</li>
+<li>Cardinalité de <code>1</code> toujours</li>
+<li>Nom du lien souligné</li>
+</ul>
+</li>
+</ul>
+<h3 id="exemple_3">Exemple</h3>
+<p><img alt="Classes Pays et Langue" src="../img/uml_bases/objets/classes_pays_langue.png" /></p>
+<p></br></p>
+<p><img alt="Un diagramme d'objet correspondant" src="../img/uml_bases/objets/objets_pays_langue.png" /></p>
+<h3 id="exemple_4">Exemple</h3>
+<p><img alt="Diagramme de classes" src="../img/uml_bases/objets/diagramme_classes_pays_region.png" /></p>
+<p><img alt="Un diagramme d'objets cohérent" src="../img/uml_bases/objets/diagramme_objets_pays_region.png" /></p>
+<p><img alt="Un diagramme d'objets incohérent avec le diagramme de classes" src="../img/uml_bases/objets/diagramme_objets_pays_region_nok.png" /></p>
+<h3 id="exercices_1">Exercices</h3>
+<ol>
+<li></li>
+</ol>
+<h2 id="le-diagramme-de-paquetage">Le diagramme de paquetage</h2>
+<h3 id="le-diagramme-de-paquetage_1">Le diagramme de paquetage</h3>
+<ul>
+<li><strong>Représenter l'organisation en paquetages</strong><ul>
+<li>paquetage = ensemble d'éléments UML fournissant un service cohérent</li>
+<li>utile pour structurer les gros projets</li>
+</ul>
+</li>
+</ul>
+<p></br></p>
+<p><img alt="Représentation interne d'un paquetage" src="../img/uml_bases/paquetages/paquetage_vue_interne.png" /></p>
+<h3 id="dependances-entre-paquetages">Dépendances entre paquetages</h3>
+<p></br></p>
+<p><img alt="Dépendance entre deux paquetages" src="../img/uml_bases/paquetages/paquetage_dependance.png" /></p>
+<p></br></p>
+<p><img alt="Import d'un paquetage" src="../img/uml_bases/paquetages/paquetage_import.png" /></p>
+<h3 id="exemple_5">Exemple</h3>
+<p></br></p>
+<p><img alt="Séparation IHM - code métier" src="../img/uml_bases/paquetages/separation_ihm_metier.png" /></p>
+<h3 id="exemple_6">Exemple</h3>
+<p></br></p>
+<p><img alt="Architecture en couches" src="../img/uml_bases/paquetages/archi_couches.png" /></p>
+<h2 id="le-diagramme-de-deploiement">Le diagramme de déploiement</h2>
+<h3 id="diagramme-de-deploiement">Diagramme de déploiement</h3>
+<ul>
+<li><strong>Décrire la configuration physique des matériels</strong><ul>
+<li>répartition des composants</li>
+<li>interractions entre noeuds</li>
+</ul>
+</li>
+</ul>
+<p></br></p>
+<p><img alt="Diagramme de déploiement" src="../img/uml_miniatures/deploiement.png" /></p>
+<h3 id="noeuds-et-composants">Noeuds et composants</h3>
+<ul>
+<li>Noeud = élément physique du système</li>
+<li>Composant = unité logicielle autonome<ul>
+<li><em>diagramme de composant : vue de haut niveau sur un système</em></li>
+</ul>
+</li>
+<li>Artifact = fichier présent sur un noeud et matérialisant la présence d'un composant</li>
+</ul>
+<p><img alt="Présente d'un composant sur un noeud" src="../img/uml_bases/deploiement/artifact.png" /></p>
+<h3 id="exercice_1">Exercice</h3>
+<ol>
+<li>Station météo</li>
+</ol>
+<h2 id="le-diagramme-dactivite">Le diagramme d'activité</h2>
+<h3 id="diagramme-dactivite">Diagramme d'activité</h3>
+<ul>
+<li><strong>Décrire les enchaînements d'actions lors d'une fonctionnalité importante</strong><ul>
+<li>un cas d'utilisation</li>
+<li>une méthode importante</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Diagramme d'activité" src="../img/uml_miniatures/activite.png" /></p>
+<h3 id="elements-de-base">Eléments de base</h3>
+<p></br></p>
+<p><img alt="Etat initial / Etat final" src="../img/uml_bases/activite/etat_initial_final.png" /></p>
+<p></br></p>
+<p><img alt="Activité" src="../img/uml_bases/activite/activite.png" /></p>
+<p></br></p>
+<p><img alt="Transition" src="../img/uml_bases/activite/transition.png" /></p>
+<h3 id="branchement-conditionnel">Branchement conditionnel</h3>
+<ul>
+<li>Activités dépendantes du résultat d'un test</li>
+</ul>
+<p><br/></p>
+<p><img alt="Branchement conditionnel" src="../img/uml_bases/activite/condition.png" /></p>
+<h3 id="transitions-concurrentes">Transitions concurrentes</h3>
+<ul>
+<li>Activités effectuées en parallèle</li>
+<li><strong>Join</strong> = séparation de branches d'activités</li>
+<li><strong>Fork</strong> = resynchronisation des branches d'activités</li>
+</ul>
+<p></br></p>
+<p><img alt="Transitions concurrentes" src="../img/uml_bases/activite/parallele.png" /></p>
+<h3 id="exemple_7">Exemple</h3>
+<p><img alt="Activité insérer un chèque" src="../img/uml_bases/activite/diagramme_inserer_cheque.png" /></p>
+<h3 id="exemple_8">Exemple</h3>
+<p><img alt="Diagramme d'activité composé d'autres diagrammes" src="../img/uml_bases/activite/diagramme_distributeur_billets.png" /></p>
+<h3 id="couloir-dactivites">Couloir d'activités</h3>
+<p><img alt="Diagramme d'activité - Traiter une commande" src="../img/uml_bases/activite/couloirs.png" /></p>
+<h3 id="exercice_2">Exercice</h3>
+<ol>
+<li>Mousse au chocolat</li>
+<li>GPS de navigation</li>
+</ol>
+<h2 id="le-diagramme-de-sequence">Le diagramme de séquence</h2>
+<h3 id="diagramme-de-sequence">Diagramme de séquence</h3>
+<ul>
+<li><strong>Décrire les interactions entre entités lors d'une fonctionnalité importante</strong><ul>
+<li>un cas d'utilisation</li>
+<li>une méthode importante</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Diagramme de séquence" src="../img/uml_miniatures/sequence.png" /></p>
+<h3 id="activation-des-objets">Activation des objets</h3>
+<ul>
+<li>Axe du temps du haut vers le bas</li>
+<li>Ligne de vie des objets<ul>
+<li>périodes d'activation</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Ligne de vie et période d'activation" src="../img/uml_bases/sequence/ligne_vie.png" /></p>
+<h3 id="echanges-de-messages">Echanges de messages</h3>
+<ul>
+<li>Flux de données échangés<ul>
+<li>envoi d'un message =appel de méthode</li>
+<li>réponse =retour de méthodes</li>
+<li>numérotation optionnelle des messages échangés</li>
+</ul>
+</li>
+<li>Types de messages :<ul>
+<li>synchrone : attente d'une réponse</li>
+<li>asynchrone : pas de réponse/retour</li>
+<li>de retour : valeur renvoyée suite à message synchrone</li>
+<li>création / destruction</li>
+</ul>
+</li>
+</ul>
+<h3 id="types-de-messages">Types de messages</h3>
+<p><img alt="Les différents types de messages" src="../img/uml_bases/sequence/types_messages.png" /></p>
+<h3 id="cadre-dinteraction">Cadre d'interaction</h3>
+<ul>
+<li>Partie du diagramme associée à une modalité d'exécution<ul>
+<li><code>opt</code> : condition de test (<em>si</em> en programmation)</li>
+<li><code>alt</code> : plusieurs conditions de test (<em>si / sinon si...</em>)</li>
+<li><code>loop</code> : répétition d'un échange de messages</li>
+<li><code>par</code> : fragments exécutés en parallèle</li>
+<li><code>ref</code> : passage par un autre diagramme de séquence</li>
+</ul>
+</li>
+</ul>
+<h3 id="exemple_9">Exemple</h3>
+<p><img alt="" src="../img/exo_uml/demineur_sequence_decouvrir.png" /></p>
+<h3 id="exercice_3">Exercice</h3>
+<ol>
+<li>Correspondance diagramme de classes / diagramme de séquence</li>
+</ol>
+<h2 id="le-diagramme-detats-transitions">Le diagramme d'états-transitions</h2>
+<h3 id="diagramme-detats-transitions">Diagramme d'états-transitions</h3>
+<ul>
+<li><strong>Représenter les états possibles d'un objet et les transitions entre eux</strong><ul>
+<li>utile lorsque l'état d'un objet dépend de son hitorique</li>
+<li>symbolique proche de celle du diagramme d'activité</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Diagramme d'états-transitions" src="../img/uml_miniatures/etats_transitions.png" /></p>
+<h3 id="etats-et-transitions">Etats et transitions</h3>
+<ul>
+<li>Etat stable</li>
+<li>Transition instantannée</li>
+</ul>
+<p><img alt="Etat initial  / Transition  / Etat" src="../img/uml_bases/etats-transitions/etat_transition.png" /></p>
+<h3 id="conditions-de-garde">Conditions de garde</h3>
+<ul>
+<li>Plusieurs transtions possibles à partir d'un état</li>
+</ul>
+<p><img alt="Transitions avec gardes - Système de thermostat" src="../img/uml_bases/etats-transitions/transitions_gardes.png" /></p>
+<h3 id="transitions-reflexives">Transitions refléxives</h3>
+<ul>
+<li>Transition laissant l'objet dans le même état</li>
+</ul>
+<p><img alt="Transition reflexive" src="../img/uml_bases/etats-transitions/transition_reflexive.png" /></p>
+<h3 id="exercice_4">Exercice</h3>
+<ol>
+<li>Démineur</li>
+</ol>
+<h2 id="uml-et-methodologie">UML et méthodologie</h2>
+<h3 id="_2"></h3>
+<ul>
+<li>UML est un langage</li>
+</ul>
+<h3 id="du-besoin-au-code">Du besoin au code</h3>
+<p><img alt="Comment passer d'un besoin à du code" src="../img/methodes_dvp/besoin_code.png" /></p>
+<h3 id="qualite-dun-logiciel">Qualité d'un logiciel</h3>
+<ul>
+<li>Capacité fonctionnelle<ul>
+<li>réponse aux besoins explicites et implicites</li>
+</ul>
+</li>
+<li>Facilité d'utilisation<ul>
+<li>ergonomie, gestion des utilisations incorrectes</li>
+</ul>
+</li>
+<li>Fiabilité<ul>
+<li>exactitude des résultats, tolérance aux pannes</li>
+</ul>
+</li>
+<li>Performance<ul>
+<li>temps de réponse, débit</li>
+</ul>
+</li>
+<li>Maintenabilité<ul>
+<li>effort nécessaire pour corriger ou transformer</li>
+</ul>
+</li>
+<li>Portabilité<ul>
+<li>aptitude à fonctionner dans un nouvel environnement</li>
+</ul>
+</li>
+</ul>
+<h3 id="cycles-de-developpement">Cycles de développement</h3>
+<p><img alt="Cycle en cascade" src="../img/methodes_dvp/cycle_cascade.png" /></p>
+<h3 id="cycles-de-developpement_1">Cycles de développement</h3>
+<p><img alt="Cycle en V" src="../img/methodes_dvp/cycle_v.png" /></p>
+<h3 id="methodes-de-developpement">Méthodes de développement</h3>
+<ul>
+<li>Quelques méthodes de développement utilisant UML :<ul>
+<li>Le processus unifié (PU, UP, RUP, AUP...)</li>
+<li>La méthode minimale</li>
+<li>La méthode <em>extreme programming</em> (XP)</li>
+</ul>
+</li>
+</ul>
+<h3 id="le-processus-unifie">Le processus unifié</h3>
+<ul>
+<li>Basé sur UML</li>
+<li>Guidé par les besoins des utilisateurs</li>
+<li>Centré sur l'architecture logicielle</li>
+<li>Itératif et incrémental</li>
+</ul>
+<h3 id="le-processus-unifie_1">Le processus unifié</h3>
+<ul>
+<li>Guidé par les besoins des utilisateurs<ul>
+<li>modèles UML dérivés des cas d'utilisation </li>
+</ul>
+</li>
+<li>Marche à suivre :<ol>
+<li>réaliser un ébauche grossière de l'application</li>
+<li>identifier les fonctions essentielles</li>
+<li>adapter l'architecture pour prendre en compte ces fonctionnalités</li>
+<li>tester</li>
+<li>recommencer</li>
+</ol>
+</li>
+<li><em>S'y prendre en plusieurs fois et affiner le modèle par étapes</em></li>
+</ul>
+<h3 id="le-processus-unifie_2">Le processus unifié</h3>
+<p><img alt="Cycle en spirale" src="../img/methodes_dvp/cycle_spirale.png" /></p>
+<h3 id="extreme-programming">eXtreme Programming</h3>
+<ul>
+<li>Client maîtrise d'ouvrage</li>
+<li>Livraisons au plus tôt</li>
+<li>Tests de toutes les fonctionnalités</li>
+<li>Amélioration continue de la structure interne</li>
+</ul>
+<h3 id="extreme-programming_1">eXtreme Programming</h3>
+<ul>
+<li>Programmation<ul>
+<li>développement guidés par les tests</li>
+<li>conception simple</li>
+<li>remaniement</li>
+</ul>
+</li>
+<li>Collaboration<ul>
+<li>programmation en binôme</li>
+<li>responsabilité collective du code</li>
+<li>règles de codage</li>
+<li>intégration continue</li>
+</ul>
+</li>
+<li>Gestion de projet<ul>
+<li>Client sur site</li>
+<li>Rythme durable</li>
+<li>Livraisons fréquentes</li>
+<li>Planification itérative</li>
+</ul>
+</li>
+</ul>
+<h3 id="appartee-sur-les-tests">Appartée sur les tests</h3>
+<ul>
+<li>Tests unitaires<ul>
+<li>écrits éventuellement avant le code</li>
+<li>guider et rythmer la conception</li>
+<li>documenter le code</li>
+</ul>
+</li>
+<li>Tests fonctionnels<ul>
+<li>absence d'anomalie</li>
+<li>fonctionnalités livrées</li>
+<li>= recette</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
