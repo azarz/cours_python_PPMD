@@ -71,6 +71,10 @@ Bibliothèques interdites :
 
   - Pygame ou tout autre bibliothèque rendant le développement trivial (le but étant de s'entraîner à coder en orienté objet)
 
+Exemples de jeux :
+
+  - Régicide, Jungo, Balatro, échecs...
+
 ## Plugin QGIS de calcul d'isochrones (géomatique) (difficulté : ++)
 
 L'objectif de ce projet fil rouge est de proposer un plugin QGIS qui permet de faire appel au service de calculs d'isochrones de la Géoplateforme. On souhaitera pouvoir paramétrer la requête avec toutes les possibilités offertes par le service, et afficher la réponse dans l'interface cartographique.

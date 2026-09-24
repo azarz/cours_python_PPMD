@@ -1,10 +1,10 @@
 ## Planning des cours
 
-### Cours 1 (après-midi du 01/10/2025)
+### Cours 1 (après-midi du 30/09/2026)
 Présentation du cours, des objectifs, de l'intervenant.
 [TP d'introduction](../tp/intro) pour se remettre en jambes en Python.
 
-### Cours 2 (après-midi du 02/10/2025)
+### Cours 2 (matin du 01/10/2026)
 
 Suite et fin du TP d'introduction.
 
@@ -16,25 +16,25 @@ Présentation de l'[orienté objet en python](../supports_cours/Cours_Slides_Int
 
 Rappels sur l'[analyse informatique](../supports_cours/Analyse_informatique_presentation) puis [exercices d'analyse informatique](../supports_cours/Analyse_informatique_exercices.pdf).
 
-### Cours 3 (après-midi du 23/10/2025)
+### Cours 3 (après-midi du 01/10/2026)
 Choix du projet fil rouge en fonction de vos propositions et des choix de projet informatique.  Initialisation du projet sur Github ou GitLab, partage par mail du lien vers votre dépôt (qui contiendra analyse et code pour la notation).
 
 Analyse informatique en autonomie avec comme sujet le [fil rouge](../fil_rouge) du cours. Pour le plugin QGIS : en amont, trouver la documentation du service d'isochrones de la Géoplateforme, des plugins QGIS, etc.
 
-### Cours 4 (matin du 24/10/2025)
+### Cours 4 (matin du 23/10/2026)
 - Présentation par les étudiants de leurs analyses aux autres étudiants. Critiques constructives.
 - Suite et fin provisoire de l'analyse informatique.
 - Début de l'[implémentation](../fil_rouge/implementation) de l'analyse.
 
-### Cours 5 (après-midi du 24/10/2025)
+### Cours 5 (après-midi du 23/10/2026)
 - Points cours : 1 fichier par classe ; [documenter](../fil_rouge/documentation_et_tests) les fonctions et classes ; clarté du code : variables, classes et fonctions avec des noms porteurs de sens
 
-### Cours 6 (matin du 03/11/2025)
+### Cours 6 (matin du 02/11/2026)
 - Interfaces graphiques : on suit le cours suivant : https://courspython.com/interface-graphique.html (Autres tutos : https://build-system.fman.io/pyqt5-tutorial https://likegeeks.com/pyqt5-tutorial/)
 - Suite de l'implémentation, en appliquant les interfaces graphiques
 
-### Cours 7 (après-midi du 06/11/2025)
+### Cours 7 (après-midi du 05/11/2026)
 Suite de l'implémentation du fil rouge
 
-### Cours 8 (après-midi du 12/11/2025)
+### Cours 8 (après-midi du 10/11/2026)
 Fin de l'implémentation et démo des programmes fil rouge terminés.
