@@ -46,3 +46,4 @@ theme:
     - content.code.copy
 plugins:
   - search
+  - open-in-new-tab
