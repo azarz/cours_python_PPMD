@@ -17,7 +17,7 @@ Evaluation sur 3 critères :
  + Gestion du projet et des outils
 
 Intervenant :
-Amaury Zarzelli, Concepteur/Développeur au pôle technique Géoportail depuis octobre 2018. Ancien élève ingénieur (TSI) de l'ENSG.
+Amaury Zarzelli, Concepteur/Développeur à l'IGN dans le département Géoplateforme depuis octobre 2018. Ancien élève ingénieur (TSI) de l'ENSG.
 
 ## Planning des cours
 
