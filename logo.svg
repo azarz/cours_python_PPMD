@@ -1,0 +1,48 @@
+
+<svg width="320" height="150" viewBox="0 0 320 150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond transparent -->
+  <rect width="100%" height="100%" fill="none"/>
+
+  <!-- Forme bleue (inspiration Python) -->
+  <path d="M80 40
+           a30 30 0 0 1 30 -30
+           h40
+           a20 20 0 0 1 20 20
+           v25
+           a20 20 0 0 1 -20 20
+           h-35
+           a15 15 0 0 0 -15 15
+           v10
+           a10 10 0 0 1 -10 10
+           h-10
+           a20 20 0 0 1 -20 -20
+           v-50
+           a30 30 0 0 1 30 -30"
+        fill="#3776AB"/>
+
+  <!-- Forme jaune (inspiration Python) -->
+  <path d="M160 110
+           a30 30 0 0 1 -30 30
+           h-40
+           a20 20 0 0 1 -20 -20
+           v-25
+           a20 20 0 0 1 20 -20
+           h35
+           a15 15 0 0 0 15 -15
+           v-10
+           a10 10 0 0 1 10 -10
+           h10
+           a20 20 0 0 1 20 20
+           v50
+           a30 30 0 0 1 -30 30"
+        fill="#FFD43B"/>
+
+  <!-- Texte POO -->
+  <text x="200" y="85"
+        font-family="Arial, sans-serif"
+        font-size="48"
+        font-weight="700"
+        fill="white">
+    POO
+  </text>
+</svg>
