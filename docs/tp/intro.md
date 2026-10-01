@@ -40,3 +40,5 @@ def register_all_namespaces(filename):
       ET.register_namespace(ns, namespaces[ns])
 ```
 
+##### Fichier de sortie non reconnu par QGIS alors que la structure semble bonne
+Attention à l'encodage : s'assurer que le fichier de sortie est en UTF-8

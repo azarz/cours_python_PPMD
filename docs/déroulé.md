@@ -8,9 +8,9 @@ Présentation du cours, des objectifs, de l'intervenant.
 
 Suite et fin du TP d'introduction.
 
-Présentation rapide de git : https://rogerdudler.github.io/git-guide/
+Présentation rapide de git : [https://rogerdudler.github.io/git-guide/](https://rogerdudler.github.io/git-guide/). Quelques commandes git : git clone, git add, git commit, git pull, git push.
 
-Présentation du [fil rouge](../fil_rouge/) du cours (démineur ou jeu de société assez simple ou plugin QGIS pour intégrer le service de calcul d'isochrones du Géoportail). Quelques commandes git : git clone, git add, git commit, git pull, git push.
+Présentation du [fil rouge](../fil_rouge/) du cours (démineur ou jeu de société assez simple ou plugin QGIS pour intégrer le service de calcul d'isochrones de la Géoplateforme).
 
 Présentation de l'[orienté objet en python](../supports_cours/Cours_Slides_Intro_POO_Intro_POO.pdf) et de sa syntaxe.
 
@@ -30,7 +30,7 @@ Analyse informatique en autonomie avec comme sujet le [fil rouge](../fil_rouge) 
 - Points cours : 1 fichier par classe ; [documenter](../fil_rouge/documentation_et_tests) les fonctions et classes ; clarté du code : variables, classes et fonctions avec des noms porteurs de sens
 
 ### Cours 6 (matin du 02/11/2026)
-- Interfaces graphiques : on suit le cours suivant : https://courspython.com/interface-graphique.html (Autres tutos : https://build-system.fman.io/pyqt5-tutorial https://likegeeks.com/pyqt5-tutorial/)
+- Interfaces graphiques : on suit le cours suivant : [https://courspython.com/interface-graphique.html](https://courspython.com/interface-graphique.html) (Autres tutos : [https://build-system.fman.io/pyqt5-tutorial](https://build-system.fman.io/pyqt5-tutorial) [https://likegeeks.com/pyqt5-tutorial/](https://likegeeks.com/pyqt5-tutorial/))
 - Suite de l'implémentation, en appliquant les interfaces graphiques
 
 ### Cours 7 (après-midi du 05/11/2026)
